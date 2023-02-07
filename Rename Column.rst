@@ -14,23 +14,11 @@ This function is used to rename the columns of your dataset
 - **Column:** Column to be renamed (*Required:* TRUE, *Multiple:* FALSE, *Datatypes:* ['ANY'], *Options:* FIELDS, *Datasets:* Input Dataset)
   
 |
-- **New Name:** New name to the column
-  
-  - Required: TRUE
-  - Multiple: FALSE
-  - Datatypes: ['STRING']
-  - Options: CONSTANT
+- **New Name:** New name to the column (*Required:* TRUE, *Multiple:* FALSE, *Datatypes:* ['STRING'], *Options:* CONSTANT)
 
 |
-- **Output Dataset:** Output Dataset to be created
-
-  - Required: TRUE
-  - Multiple: FALSE
+- **Output Dataset:** Output Dataset to be created(*Required:* TRUE, *Multiple:* FALSE)
   
-
-**Requirements**
------
-pandas
 
 **How to use it in Notebook**
 -----
@@ -55,4 +43,7 @@ recipe_Rename_Column.run()
 .. image:: rename_column.png
 
 
+**Requirements**
+-----
+pandas
 
