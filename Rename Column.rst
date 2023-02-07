@@ -52,7 +52,7 @@ recipe_Rename_Column.run()
 
 **How to use it in RC UI**
 -----
-
+.. image:: Screen Shot 2023-02-07 at 6.57.25 PM.png
 
 
 
