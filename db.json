@@ -1,0 +1,385 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Swagger API"
+  },
+  "host": "www.te-rrohit-test.qa.paypal.com:26898",
+  "basePath": "/v1/risksimadminserv/rule-gen/job/skjd23-23489234-kjshdjkf223-23498",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/v1/risksimadminserv/rule-gen/job/{jobId}": {
+      "get": {
+        "summary": "Get the rules created when job is completed",
+        "parameters": [
+          {
+            "name": "auth-x-useremail",
+            "in": "header",
+            "description": "User Email",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "client-info",
+            "in": "header",
+            "description": "Client Info",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "jobId",
+            "in": "path",
+            "description": "Job id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response | Mock JobId - skjd23-23489234-kjshdjkf223-23498 (Job completed successfully)",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "metaInfo": {
+                  "type": "string"
+                },
+                "result": {
+                  "type": "object",
+                  "properties": {
+                    "Rule": {
+                      "type": "string"
+                    },
+                    "Type": {
+                      "type": "string"
+                    },
+                    "Category": {
+                      "type": "string"
+                    },
+                    "merchant_id": {
+                      "type": "integer"
+                    },
+                    "start_dt": {
+                      "type": "string",
+                      "format": "date"
+                    },
+                    "end_dt": {
+                      "type": "string",
+                      "format": "date"
+                    },
+                    "Perc_Reject_by_Rule": {
+                      "type": "number"
+                    },
+                    "Perc_Additional_Data_Flagged": {
+                      "type": "number"
+                    },
+                    "Precision": {
+                      "type": "number"
+                    },
+                    "CB_Precision": {
+                      "type": "number"
+                    },
+                    "CB_Recall": {
+                      "type": "number"
+                    },
+                    "Overall_Recall": {
+                      "type": "number"
+                    },
+                    "Good_Customer_Decline": {
+                      "type": "number"
+                    },
+                    "Perc_Overall_Good_Customers_Flagged": {
+                      "type": "number"
+                    },
+                    "CB_Caught_by_Rule": {
+                      "type": "number"
+                    },
+                    "Tool_Reject_Caught_by_Rule": {
+                      "type": "number"
+                    },
+                    "Processor_Decline_Caught_by_Rule": {
+                      "type": "number"
+                    },
+                    "Total_Reject_by_Rule": {
+                      "type": "number"
+                    },
+                    "New_Approval_Rate_Rule": {
+                      "type": "number"
+                    },
+                    "Change_Approval_Rate_by_Rule": {
+                      "type": "number"
+                    },
+                    "New_Reject_Rate_Rule": {
+                      "type": "number"
+                    },
+                    "Change_Reject_Rate_by_Rule": {
+                      "type": "number"
+                    },
+                    "New_Chargeback_Rate_Rule": {
+                      "type": "number"
+                    },
+                    "Change_Chargeback_Rate_by_Rule": {
+                      "type": "number"
+                    },
+                    "New_IssuerDecline_Rate_Rule": {
+                      "type": "number"
+                    },
+                    "Change_IssuerDecline_Rate_by_Rule": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "No content | Mock JobId - job_111 (Job in progress)"
+          },
+          "400": {
+            "description": "client-info or auth-x-useremail missing",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "debug_id": {
+                  "type": "string"
+                },
+                "details": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "issue": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "links": {
+                  "type": "array",
+                  "items": {}
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity Job Completed with status as failed | Mock Job Id - job_444 (Job completed with status as FAILED)",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "debug_id": {
+                  "type": "string"
+                },
+                "details": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "issue": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "links": {
+                  "type": "array",
+                  "items": {}
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal service error | Mock Job Id - job_5467 (Unknown/Invalid Job ID)",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "debug_id": {
+                  "type": "string"
+                },
+                "details": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "issue": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "links": {
+                  "type": "array",
+                  "items": {}
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/risksimadminserv/rule-gen/job/submit": {
+      "post": {
+        "summary": "Trigger an asynchronous job for rule generation.",
+        "parameters": [
+          {
+            "name": "auth-x-useremail",
+            "in": "header",
+            "description": "User email for authentication",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "client-info",
+            "in": "header",
+            "description": "Client information",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "description": "Request content type",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "merchantId",
+            "in": "header",
+            "description": "Merchant ID",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Cookie",
+            "in": "header",
+            "description": "Request cookie",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Job submission data",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "startDate": {
+                  "type": "string",
+                  "format": "date"
+                },
+                "endDate": {
+                  "type": "string",
+                  "format": "date"
+                },
+                "configJson": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "jobId": {
+                  "type": "string"
+                }
+              }
+            },
+            "examples": {
+              "example1": {
+                "jobId": "skjd23-23489234-kjshdjkf223-23498"
+              }
+            }
+          },
+          "400": {
+            "description": "Missing merchantId, client-info, auth-x-useremail in headers or missing startdate, endDate, configJson in body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "debug_id": {
+                  "type": "string"
+                },
+                "details": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "issue": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "links": {
+                  "type": "array",
+                  "items": {}
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal service error",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "debug_id": {
+                  "type": "string"
+                },
+                "details": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "issue": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "links": {
+                  "type": "array",
+                  "items": {}
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
